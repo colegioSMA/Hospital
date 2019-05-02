@@ -29,7 +29,7 @@ public class Sistema {
 		}
 	}
 	public boolean hayMasPersonalQuePacientes() {
-		return listaPacientes.size() > 
-			listaPersonal.size();
+		return listaPersonal.size() > 
+			listaPacientes.size();
 	}
 }
