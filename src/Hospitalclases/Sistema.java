@@ -1,3 +1,4 @@
+package Hospitalclases;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +8,7 @@ public class Sistema {
 			new ArrayList<>();
 	private List<Personal> listaPersonal = 
 			new ArrayList<>();
+	
 	public Sistema(List<Paciente> listaPacientes, List<Personal> listaPersonal) {
 		super();
 		this.listaPacientes = listaPacientes;
@@ -29,7 +31,7 @@ public class Sistema {
 		}
 	}
 	public boolean hayMasPersonalQuePacientes() {
-		return listaPacientes.size() > 
+		return listaPacientes.size() < 
 			listaPersonal.size();
 	}
 }

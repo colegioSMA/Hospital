@@ -1,5 +1,7 @@
+package Hospitalclases;
 
 public class Personal {
+	
 	private static int contador = 0;
 	private int identificador;
 	private String nombre;
@@ -30,6 +32,10 @@ public class Personal {
 	}
 	public boolean esPersonalHospital() {
 		return nombre.startsWith("PERS-");
+	}
+	@Override
+	public String toString() {
+		return "Personal [identificador=" + identificador + ", nombre=" + nombre + ", puesto=" + puesto + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {

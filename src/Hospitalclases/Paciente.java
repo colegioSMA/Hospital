@@ -1,6 +1,8 @@
+package Hospitalclases;
 
 public class Paciente {
 
+	
 	private static int contador = 0;
 	private int identificador;
 	private String nombre;
@@ -14,6 +16,7 @@ public class Paciente {
 		this.telefono = telefono;
 		this.numeroSeguridadSocial = numeroSeguridadSocial;
 	}
+	
 	public int getIdentificador() {
 		return identificador;
 	}
@@ -43,6 +46,11 @@ public class Paciente {
 	}
 	public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
 		this.numeroSeguridadSocial = numeroSeguridadSocial;
+	}
+	@Override
+	public String toString() {
+		return "Paciente [identificador=" + identificador + ", nombre=" + nombre + ", edad=" + edad + ", telefono="
+				+ telefono + ", numeroSeguridadSocial=" + numeroSeguridadSocial + "]";
 	}
 	@Override
 	public boolean equals(Object obj) {
