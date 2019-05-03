@@ -1,5 +1,6 @@
+package Hospital;
 
-public class Paciente {
+public class Paciente implements Comparable{
 
 	private static int contador = 0;
 	private int identificador;
@@ -65,5 +66,15 @@ public class Paciente {
 	}
 	public boolean esMayorEdad() {
 		return edad>=18?true:false;
+	}
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public String toString() {
+		return "Paciente [identificador=" + identificador + ", nombre=" + nombre + ", edad=" + edad + ", telefono="
+				+ telefono + ", numeroSeguridadSocial=" + numeroSeguridadSocial + "\n]";
 	}
 }

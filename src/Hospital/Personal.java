@@ -1,3 +1,4 @@
+package Hospital;
 
 public class Personal {
 	private static int contador = 0;
@@ -42,6 +43,10 @@ public class Personal {
 		}
 		return false;
 				
+	}
+	@Override
+	public String toString() {
+		return "Personal [identificador=" + identificador + ", nombre=" + nombre + ", puesto=" + puesto + "\n]";
 	}
 	
 }
