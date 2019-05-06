@@ -1,3 +1,4 @@
+package Hospital;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class Sistema {
 		this.listaPacientes = listaPacientes;
 		this.listaPersonal = listaPersonal;
 	}
+	
 	public void anadePaciente(Paciente paciente) {
 		if (!listaPacientes.contains(paciente)) {
 			listaPacientes.add(paciente);
@@ -32,4 +34,21 @@ public class Sistema {
 		return listaPersonal.size() > 
 			listaPacientes.size();
 	}
+
+	public List<Paciente> getListaPacientes() {
+		return listaPacientes;
+	}
+
+	public void setListaPacientes(List<Paciente> listaPacientes) {
+		this.listaPacientes = listaPacientes;
+	}
+
+	public List<Personal> getListaPersonal() {
+		return listaPersonal;
+	}
+
+	public void setListaPersonal(List<Personal> listaPersonal) {
+		this.listaPersonal = listaPersonal;
+	}
+	
 }
