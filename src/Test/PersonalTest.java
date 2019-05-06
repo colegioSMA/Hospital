@@ -18,15 +18,12 @@ public class PersonalTest {
 	}
 
 	@Test
-	public void esCeladorTest() {	
-		
-		boolean noEsCelador=true;
-		
-		if(personal.esCelador()) {			
-			noEsCelador=false;
-		}		
+	public void esCeladorTest() {		
+			
 		assertTrue(personal.esCelador());
-		assertFalse(noEsCelador);
+		
+		personal.setPuesto("celador");
+		assertFalse(personal.esCelador());
 	}
 
 }
