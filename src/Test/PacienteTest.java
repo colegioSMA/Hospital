@@ -29,13 +29,13 @@ public class PacienteTest {
 	
 	@Test
 	public void esMayorEdadTest() {
+		
 		boolean esCierto=true;
 		
 		if(paciente.esMayorEdad()) {
 			esCierto=false;
 		}
-		assertFalse(esCierto);		
-		
+		assertFalse(esCierto);				
 	}
 	
 	
