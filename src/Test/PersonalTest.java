@@ -22,7 +22,7 @@ public class PersonalTest {
 			
 		assertTrue(personal.esCelador());
 		
-		personal.setPuesto("celador");
+		personal.setPuesto("elador");
 		assertFalse(personal.esCelador());
 	}
 

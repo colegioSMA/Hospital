@@ -8,7 +8,7 @@ import Hospital.Paciente;
 
 public class PacienteTest {
 	
-	Paciente paciente;	
+	Paciente paciente;
 
 	@Before
 	public void setUp() throws Exception {
