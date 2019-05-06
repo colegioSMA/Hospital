@@ -12,22 +12,14 @@ public class PacienteTest {
 
 	@Before
 	public void setUp() throws Exception {
-		paciente= new Paciente(1,"Jose",18,"66548219","123456789as");
+		paciente= new Paciente(1,"Jose",20,"66548219","123456789as");
 	}
 	
-	@Test
+	@Test(expected=NullPointerException.class)
 	public void setIdentificadorTest() {	
+		paciente.setIdentificador(2);
 		
-		boolean seHaLanzado=false;
-		
-		try {
-			paciente.setIdentificador(2);
-		} catch (NullPointerException e) {
-			seHaLanzado=true;
-		}
-		
-		assertTrue(seHaLanzado);
-	}	
+	}
 	
 	@Test
 	public void esNumeroSSValidoTest() {		

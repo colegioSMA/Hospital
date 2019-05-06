@@ -18,7 +18,8 @@ public class PersonalTest {
 	}
 
 	@Test
-	public void esCeladorTest() {		
+	public void esCeladorTest() {	
+		
 		boolean noEsCelador=true;
 		
 		if(personal.esCelador()) {			

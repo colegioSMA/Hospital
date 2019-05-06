@@ -69,8 +69,7 @@ public class SistemaTest {
 	}			
 	
 	@Test
-	public void anadePacienteNuevoTest() {	
-		
+	public void anadePacienteNuevoTest() {		
 			
 		List<Paciente> listaAux=Arrays.asList(paciente1,paciente2);
 		
