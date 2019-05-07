@@ -45,6 +45,8 @@ public class sistemaTest {
 		personal = new Personal(0, "Carlos", "Celador");
 		personal1 = new Personal(1, "Jaime", "Enfermero");
 		personal2 = new Personal(2, "Eustaquio", "Celador");
+		
+		// otra lista
 		List<Paciente> pacientes = new ArrayList<>();
 		pacientes.add(paciente);
 		pacientes.add(paciente1);
@@ -53,6 +55,8 @@ public class sistemaTest {
 		personal5.add(personal1);
 		personal5.add(personal2);
 		lista = new Sistema(pacientes, personal5);
+		
+		// otra lista
 		List<Paciente> pacientes1 = new ArrayList<>();
 		pacientes1.add(paciente);
 		pacientes1.add(paciente1);
@@ -61,6 +65,8 @@ public class sistemaTest {
 		personal6.add(personal);
 		personal6.add(personal1);
 		lista2 = new Sistema(pacientes1, personal6);
+		
+		// otra lista
 		List<Paciente> pacientes2 = new ArrayList<>();
 		pacientes2.add(paciente);
 		pacientes2.add(paciente1);
@@ -69,6 +75,14 @@ public class sistemaTest {
 		personal7.add(personal1);
 		personal7.add(personal2);
 		lista3 = new Sistema(pacientes2, personal7);
+		
+		// Se crea a mano ya que sino no estamos comprobando lo que hace el metodo
+		List<Paciente> pacientes4 = new ArrayList<>();
+		pacientes4.add(paciente);
+		pacientes4.add(paciente1);
+		List<Personal> personal8= new ArrayList<>();
+		personal8.add(personal1);
+		lista8 = new Sistema(pacientes4, personal8);
 	}
 
 	@After
@@ -80,7 +94,6 @@ public class sistemaTest {
 		assertTrue(lista.hayMasPersonalQuePacientes());
 		assertFalse(lista2.hayMasPersonalQuePacientes());
 		assertEquals(lista3.hayMasPersonalQuePacientes(), lista.hayMasPersonalQuePacientes());
-		
 	}
 	
 	@Test(expected = Exception.class)
@@ -105,10 +118,15 @@ public class sistemaTest {
 		lista7.anadePaciente(paciente);
 		lista7.anadePaciente(paciente1);
 		lista7.anadePersonal(personal1);
-		assertNotNull(lista7);
-		lista8.anadePaciente(paciente);
-		lista8.anadePaciente(paciente1);
-		lista8.anadePersonal(personal1);
+		assertNotNull(lista7.getListaPersonal());
 		assertEquals(lista8, lista7);
+		List<Personal> personal8= new ArrayList<>();
+		personal8.add(personal1);
+		assertArrayEquals(personal8.toArray(), lista7.getListaPersonal().toArray());
+		// pertenece a pacienes a partir de aqui
+		List<Paciente> pacientes4 = new ArrayList<>();
+		pacientes4.add(paciente);
+		pacientes4.add(paciente1);
+		assertArrayEquals(pacientes4.toArray(), lista7.getListaPacientes().toArray());
 	}
 }

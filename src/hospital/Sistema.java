@@ -33,4 +33,22 @@ public class Sistema {
 	public boolean hayMasPersonalQuePacientes() {
 		return listaPacientes.size() < listaPersonal.size();
 	}
+
+	public List<Paciente> getListaPacientes() {
+		return listaPacientes;
+	}
+
+	public void setListaPacientes(List<Paciente> listaPacientes) {
+		this.listaPacientes = listaPacientes;
+	}
+
+	public List<Personal> getListaPersonal() {
+		return listaPersonal;
+	}
+
+	public void setListaPersonal(List<Personal> listaPersonal) {
+		this.listaPersonal = listaPersonal;
+	}
+	
+	
 }
