@@ -1,3 +1,4 @@
+package Hospital;
 
 public class Personal {
 	private static int contador = 0;
