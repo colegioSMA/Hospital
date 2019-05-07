@@ -1,10 +1,11 @@
+package Hospital;
 
 public class Personal {
 	private static int contador = 0;
 	private int identificador;
 	private String nombre;
 	private String puesto;
-	public Personal(int identificador, String nombre, String puesto) {
+	public Personal(String nombre, String puesto) {
 		super();
 		this.identificador = ++contador;
 		this.nombre = nombre;

@@ -1,3 +1,4 @@
+package Hospital;
 
 public class Paciente {
 
@@ -7,7 +8,7 @@ public class Paciente {
 	private int edad;
 	private String telefono;
 	private String numeroSeguridadSocial;
-	public Paciente(int identificador, String nombre, int edad, String telefono, String numeroSeguridadSocial) {
+	public Paciente(String nombre, int edad, String telefono, String numeroSeguridadSocial) {
 		this.identificador = ++contador;
 		this.nombre = nombre;
 		this.edad = edad;
